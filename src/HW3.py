@@ -1,7 +1,7 @@
 a = " I love Python"
-b = a*42
+b = a * 42
 print(b)
-print(" I love Python"*42)
+print(" I love Python" * 42)
 age_in_month = 27 * 12
 print(age_in_month)
 
@@ -48,11 +48,3 @@ b = 5
 c = 6
 d = str(a) + str(b) + str(c)
 print(d)
-
-
-
-
-
-
-
-
