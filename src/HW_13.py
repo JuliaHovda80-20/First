@@ -1,7 +1,6 @@
 import json
 import datetime
 
-
 my_dictionary = {}
 
 
@@ -9,6 +8,9 @@ def print_func_name_and_time(func):
     def wrapper(*args, **kwargs):
         print(f"Function {func.__name__} was called at {datetime.datetime.now()}.")
         return func(*args, **kwargs)
+
+    with open("my_dictionary.json", "a") as f:
+        f.write(f"Function {func.__name__} was called at {datetime.datetime.now()}.")
     return wrapper
 
 
@@ -104,7 +106,7 @@ while True:
     if user_command[0] == 'stats':
         stats(my_dictionary)
     elif user_command[0] == 'add':
-        x = add_func(my_dictionary, user_command[1], user_command[2])
+        x = add_func(my_dictionary, user_command[1] , user_command[2])
         print(x)
     elif user_command[0] == 'delete':
         y = delete_name(my_dictionary, user_command[1])
@@ -113,6 +115,5 @@ while True:
         name(my_dictionary)
     elif user_command[0] == 'show':
         show_name(my_dictionary, user_command[1])
-
 
 
