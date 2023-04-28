@@ -10,7 +10,7 @@ def print_func_name_and_time(func):
         return func(*args, **kwargs)
 
     with open("my_dictionary.json", "a") as f:
-        f.write(f"Function {func.__name__} was called at {datetime.datetime.now()}.")
+        f.write(f"Function {func.__name__} was called at {datetime.datetime.now()}.\n")
     return wrapper
 
 
@@ -47,12 +47,11 @@ def add_func(my_dict, key_word, phone_number):
     import re
     key_word = str(key_word)
     try:
-        pattern = r'^\+380\d{9}$'  # Регулярний вираз для перевірки формату
+        pattern = r'^(?:\+?380|380|0)\d{9}$'  # Регулярний вираз для перевірки формату
         if re.match(pattern, phone_number):
             print("Номер телефону введено коректно!")
         else:
-            raise ValueError("Номер телефону введено некоректно. Будь ласка, введіть номер у форматі +380xxxxxxxxx.")
-
+            raise ValueError("Будь ласка, введіть номер у форматі +380xxxxxxxxx, 380xxxxxxxxx,0xxxxxxxxx")
     except ValueError as e:
         print("Помилка введення:", e)
 
