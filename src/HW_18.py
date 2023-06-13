@@ -18,11 +18,10 @@ cursor = conn.cursor()
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        first_name TEXT not null
-        unique,
-        last_name TEXT not null
-        unique,
-        age INTEGER not null
+        first_name TEXT not null,
+        last_name TEXT not null,
+        age INTEGER not null,
+        unique (first_name, last_name)
     )
 ''')
 #
