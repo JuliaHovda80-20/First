@@ -16,7 +16,7 @@ bot.send_massage("srhdgfadlfhveasswj")
 
 
 class TelegramBot(Bot):
-    def __init__(self, name, url, chat_id=None):
+    def __init__(self, name, url=None, chat_id=None):
         super().__init__(name)
         self.url = url
         self.chat_id = chat_id
