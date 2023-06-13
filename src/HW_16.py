@@ -6,7 +6,7 @@ API_KEY = 'YOUR_API_KEY'
 
 def get_weather(city):
     try:
-        url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}'
+        url = f'http://api.openweathermap.org/data/3.0/weather?q={city}&appid={API_KEY}'
         response = requests.get(url)
         data = response.json()
         temperature = data['main']['temp']
