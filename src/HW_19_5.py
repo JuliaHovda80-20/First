@@ -10,7 +10,7 @@ connection = sqlite3.connect(db_path)
 cursor = connection.cursor()
 
 # Виконання запиту
-query = "SELECT age, COUNT(*) as user_count FROM users GROUP BY age HAVING COUNT(*) > 1 ORDER BY user_count DESC;"
+query = "SELECT age, COUNT(*) as user_count FROM users GROUP BY age HAVING user_count > 1 ORDER BY user_count DESC;"
 cursor.execute(query)
 
 # Отримання результатів
