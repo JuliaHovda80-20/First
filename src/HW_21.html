@@ -174,11 +174,49 @@
         <td>6</td>
         <td>-</td>
       </tr>
-  </div>
-  </details>
       </tbody>
       </thead>
     </table>
     <footer> to be continued... </footer>
+    </div>
+      </details>
+    <hr>
+    <hr>
+    <div class="friend-count">
+      <span id="friend-count-number">0</span> friends
+    </div>
+    <button id="add-friend-button" onclick="addFriend()">Add to friends</button>
+    <button id="message-button" onclick="toggleColor()">Write a message</button>
+    <button id="offer-job-button" onclick="toggleButtons()">Offer a job</button>
+  </div>
+</div>
+
+<script>
+  // Ініціалізація кількості друзів
+  var friendCount = Math.floor(Math.random() * 100); // Генерується випадкове число від 0 до 100
+  var friendCountNumber = document.getElementById('friend-count-number');
+  friendCountNumber.textContent = friendCount;
+  function toggleColor() {
+      var messageButton = document.getElementById('message-button');
+      messageButton.classList.toggle('highlight');
+    }
+
+ function toggleButtons() {
+    var offerJobButton = document.getElementById('offer-job-button');
+    var addFriendButton = document.getElementById('add-friend-button');
+
+    offerJobButton.style.display = 'none';
+    addFriendButton.style.display = 'inline-block';
+  }
+  function addFriend() {
+    var addFriendButton = document.getElementById('add-friend-button');
+    if (!addFriendButton.disabled) {
+      friendCount++;
+      friendCountNumber.textContent = friendCount;
+      addFriendButton.textContent = "Confirmation is pending";
+      addFriendButton.disabled = true;
+    }
+  }
+</script>
 </body>
 </html>
