@@ -1,0 +1,137 @@
+.container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+margin: var(--artdeco-reset-base-margin-zero);
+        }
+.profile-picture {
+                max-width: 200px;
+                margin-bottom: 20px;
+            }
+body {
+                font-family: Arial, sans-serif;
+            }
+table {
+    border-collapse: collapse; /* Об'єднати межі таблиці */
+    margin-bottom: 20px;
+    color: #333333;
+  }
+th, td {
+    border: 4px solid rgba(0, 0, 0, 0.71); /* Задати товщину і колір межі */
+    padding: 6px; /* Задати відступи внутрішньої частини клітинки */
+  }
+
+
+.profile-background-image {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.profile-picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+
+.profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+.container {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+.profile-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333333;
+    }
+
+ /*.profile-skills li {*/
+ /*     display: inline-block;*/
+ /*     background-color: #e5e5e5;*/
+ /*     color: #333333;*/
+ /*     font-size: 14px;*/
+ /*     padding: 5px 10px;*/
+ /*     margin-right: 10px;*/
+ /*     border-radius: 3px;*/
+ /*   }*/
+.profile-description {
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 50px;
+    }
+.profile-details {
+      margin-bottom: 20px;
+    color: #666666;
+    }
+.profile-details p {
+      font-size: 16px;
+      color: #666666;
+      margin-bottom: 5px;
+    }
+.profile-skills {
+      margin-bottom: 20px;
+    }
+
+    .profile-skills h3 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    .profile-skills ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profile-skills li {
+      display: inline-block;
+      background-color: #e5e5e5;
+      color: #333333;
+      font-size: 14px;
+      padding: 5px 10px;
+      margin-right: 10px;
+      border-radius: 3px;
+    }
+   @media (max-width: 768px) {
+  /* CSS-правила для екранів з шириною до 768px */
+  .profile-header {
+    flex-direction: column;
+  }
+
+  .profile-picture {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-details {
+    text-align: center;
+  }
+}
+
+.highlight {
+      background-color: yellow;
+    }
